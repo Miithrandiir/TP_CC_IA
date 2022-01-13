@@ -30,9 +30,6 @@ def analyzeData():
     print("~ Analyse de données ~")
     print("nombre d'exemples : " + str(len(data)))
     print("nombre de caractéristiques : " + str(len(data.columns)))
-    print("nombre d'exemples de chaques classes :")
-    for classe in data.columns:
-        print("Nombre d'exemples de " + str(classe) + " : " + str(len(data[classe])))
     data.shape  # Dimension du dataframe
     data.info()  # résumé rapide des données
     print(data.describe())  # statistiques sur différentes tendances sur les données.
