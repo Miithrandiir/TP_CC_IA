@@ -1,11 +1,9 @@
-import pandas
 from pandas import read_csv
 from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
 import matplotlib.pyplot as plt
 import seaborn as sn
 from sklearn.preprocessing import LabelEncoder
-from sklearn import tree
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.neural_network import MLPClassifier
 from sklearn.metrics import confusion_matrix
