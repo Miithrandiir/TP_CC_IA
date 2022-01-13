@@ -21,6 +21,8 @@ Après analyse des données du fichier [dataCCfinal.csv](data/dataCCfinal.csv) i
  
 Les colonnes A et B sont des nombres qui ne varie pas donc ne serviront pas à apprendre, on peut donc les retirer.
 
+*La colonne Z sera la colonne a prédire !*
+
 On constate aussi que les exemples ne sont pas homogènes et que certaines classes seront difficiles à apprendre. 
 Les classes 6 (8 exemples), 3(5 exemples) et 5(4 exemples)
 
@@ -106,7 +108,7 @@ Matrice de confusion de KNN
  [ 0  0  0  0  0  3  0]
  [ 0  0  0  0  0  0  3]]
 ```
-*Note : Après expérimentation, il convient d'utiliser pour k (la valeur des k plus proches voisins) la valeur 8. Cette valeur a permit d'obtenir le meilleur apprentissage*
+*Note : Après expérimentation, il convient d'utiliser pour k (la valeur des k plus proches voisins) la valeur 8. Cette valeur a permis d'obtenir le meilleur apprentissage. Il est à noté qu'il ne fallait pas utiliser une valeur trop importante ou trop petite, si trop petite on prend en compte les valeurs aberrantes. Si la valeur est trop importante on peut oublier les classes faiblement représentées.*
 
 ### Tree Algorithm
 ```
