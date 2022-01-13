@@ -57,20 +57,37 @@ En effet, il n'était pas utile d'apprendre des caractéristiques qui ne discrim
 # Résultat (Partie Apprentissage & Conseils)
 
 ### KNN Algorithm
+
+KNN sans suppression des caractéristiques
+
 ```
 ~ KNN Algorithm ~
-KNN Train score:  0.8656716417910447
-KNN Test Score:  0.9117647058823529
+KNN Train score:  0.31343283582089554
+KNN Test Score:  0.38235294117647056
+Matrice de confusion de KNN 
+ [[13  0  0  1  0  0  1]
+ [ 5  0  1  1  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 2  0  0  0  0  0  0]
+ [ 2  0  0  0  0  0  0]
+ [ 3  1  0  0  0  0  0]
+ [ 4  0  0  0  0  0  0]]
+```
+KNN avec suppression des caractéristiques
+```
+~ KNN Algorithm ~
+KNN Train score:  0.8955223880597015
+KNN Test Score:  0.9411764705882353
 Matrice de confusion de KNN 
  [[15  0  0  0  0  0  0]
- [ 0  7  0  0  0  0  0]
- [ 0  1  0  0  0  0  0]
+ [ 0  6  0  0  0  0  0]
+ [ 0  1  0  1  0  0  0]
  [ 0  0  0  4  0  0  0]
- [ 0  0  0  2  0  0  0]
- [ 0  0  0  0  0  2  0]
+ [ 0  0  0  0  1  0  0]
+ [ 0  0  0  0  0  3  0]
  [ 0  0  0  0  0  0  3]]
 ```
-*note : Après expérimentation, il convient d'utiliser pour k (la valeur des k plus proches voisins) la valeur 8. Cette valeur a permit d'obtenir le meilleur apprentissage*
+*Note : Après expérimentation, il convient d'utiliser pour k (la valeur des k plus proches voisins) la valeur 8. Cette valeur a permit d'obtenir le meilleur apprentissage*
 
 ### Tree Algorithm
 ```
@@ -85,8 +102,22 @@ Matrice de confusion de Tree
  [ 0  0  0  0  0  2  0]
  [ 0  0  0  0  0  0  3]]
 ```
-
+*Note: on remarque que l'arbre de décision n'est pas influencé par les caractéristiques non corrélées. En effet, l'arbre se base sur l'entropie qui permet de s'abstraire d'une certaine correlation entre les caractéristiques.*
 ### Neuronal Network Algorithm
+KNN sans suppression des caractéristiques
+```
+~ Neural Network Algorithm ~
+NN Train score:  0.9552238805970149
+NN Test Score:  0.23529411764705882
+Matrice de confusion de NN 
+ [[6 1 4 2 0 2]
+ [4 1 2 0 0 0]
+ [2 0 0 0 0 0]
+ [0 1 1 0 0 0]
+ [0 1 1 1 0 1]
+ [2 1 0 0 0 1]]
+```
+KNN avec suppression des caractéristiques
 ```
 ~ Neural Network Algorithm ~
 NN Train score:  0.9552238805970149
@@ -100,3 +131,4 @@ Matrice de confusion de NN
  [ 0  0  0  0  0  2  0]
  [ 0  0  0  0  0  0  3]]
 ```
+*Note: après suppression des caractéristiques non utiles on remarque que le score sur la base de tests sont nettement meilleur !*
