@@ -5,6 +5,7 @@
 - [Analyse des données](#analyse-des-données)
   - [Matrice de corrélation](#matrice-de-corrélation)
   - [Type de problème (Classification)](#type-de-problème-classification)
+  - [Rapport au client](#rapport-au-client)
 - [Suppressions de caractéristiques](#suppressions-de-caractéristiques)
   - [Résultat lié à cette suppression](#résultat-lié-à-cette-suppression)
 - [Résultat (Partie Apprentissage & Conseils)](#résultat-partie-apprentissage--conseils)
