@@ -10,6 +10,7 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.neural_network import MLPClassifier
 from sklearn.metrics import confusion_matrix
 
+
 def label_encode(data, col: str):
     # Transforme un type catégorie en entier
     le = LabelEncoder()
@@ -44,6 +45,19 @@ def analyzeData():
     y = data["Z"]
     del x["A"]
     del x["B"]
+    del x["C"]
+    del x["E"]
+    del x["H"]
+    del x["J"]
+    del x["O"]
+    del x["P"]
+    del x["R"]
+    del x["T"]
+    del x["U"]
+    del x["V"]
+    del x["W"]
+    del x["X"]
+    del x["Y"]
     x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.33)
 
     return x_train, x_test, y_train, y_test
@@ -74,6 +88,7 @@ def neural_network(x_train, x_test, y_train, y_test):
     print("NN Train score: ", classifier.score(x_train, y_train))
     print("NN Test Score: ", classifier.score(x_test, y_test))
     print("Matrice de confusion de NN \n", confusion_matrix(y_test, classifier.predict(x_test)))
+
 
 x_train_d, x_test_d, y_train_d, y_test_d = analyzeData()
 knn(x_train_d, x_test_d, y_train_d, y_test_d)

@@ -26,3 +26,30 @@ Négativement corrélé avec la classe Z:
 ## Type de problème
 
 Après analyse on se rend compte que le problème est un problème de **classification**
+
+## Suppressions de caractéristiques
+
+Pendant le premier test on se rend compte que les performances des algorithmes KNN et Neuronal Network ne sont pas du tout bonne. (< 20%)
+Il y a un tri à faire dans les caractéristiques ! 
+
+En effet, après analyses de la matrice de corrélation on peut constater que certaines caractéristiques ne discrimine pas notre classe Z. On va pouvoir enlever certaines caractéristiques telles que :
+ - A
+ - B
+ - C
+ - E
+ - H
+ - J
+ - O
+ - P
+ - R
+ - T
+ - U
+ - V
+ - W
+ - X
+ - Y
+
+### Résultat lié à cette suppression
+
+On remarque tout de suite une nette amélioration des algorithmes KNN et Neuronal Network. 
+En effet, il n'était pas utile d'apprendre des caractéristiques qui ne discriminait pas notre classe !
