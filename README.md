@@ -23,3 +23,6 @@ Négativement corrélé avec la classe Z:
  - Le descripteur L qui semble le plus influer négativement notre classe
  - Le descripteur G
 
+## Type de problème
+
+Après analyse on se rend compte que le problème est un problème de **classification**
