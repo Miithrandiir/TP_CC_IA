@@ -58,6 +58,7 @@ def analyzeData():
     del x["W"]
     del x["X"]
     del x["Y"]
+    del x["Z"]
     x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.33)
 
     return x_train, x_test, y_train, y_test
