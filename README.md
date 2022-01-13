@@ -48,6 +48,14 @@ Négativement corrélé avec la classe Z:
 
 Après analyse on se rend compte que le problème est un problème de **classification**. Nous avons déjà des exemples étiquetés nous sommes donc face à un apprentissage supervisé.
 
+## Rapport au client
+> A partir de cette analyse, que pouvez-vous dire à votre client ?
+
+On peut donc dire au client que certains champs donnés ne sont pas pertinent, ils seront voués à disparaître. On a localisé des colonnes qui ne nous serviront pas tels que les colonnes A et B. 
+Il aurait été préférable d'avoir un nombre similaire d'exemples pour chaque classe pour permettre un apprentissage de meilleure qualité.
+
+Les différents algorithmes qui ont été retenues sont : Les K plus proches voisins (KNN), L'arbre de décisions (Tree) et le réseau de neurones (Neuronal network). Tous les trois pouvant résoudre des problèmes de classifications.
+
 # Suppressions de caractéristiques
 
 Pendant le premier test on se rend compte que les performances des algorithmes KNN et Neuronal Network ne sont pas du tout bonne. (< 20%)
