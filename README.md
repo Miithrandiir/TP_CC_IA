@@ -16,6 +16,9 @@ On remarque que la classe C est une classe comportant des caractères alphabéti
 
 ## Matrice de corrélation
 ![](matrice_correlation.png)
+
+*Note: il n'y pas assez de place pour afficher tous les caractères, cependant l'alignement des lettres sur l'axe de y est toujours bon*
+
 Positivement corrélé avec la classe Z:
  - Le descripteur F qui semble être le plus corrélé
  - Le descripteur I

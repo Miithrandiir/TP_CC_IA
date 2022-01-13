@@ -31,11 +31,11 @@ def analyzeData():
     data.shape  # Dimension du dataframe
     data.info()  # résumé rapide des données
     print(data.describe())  # statistiques sur différentes tendances sur les données.
-    sn.heatmap(data.corr(), cmap="PiYG", vmax=0.5)
     print("Nombre d'exemples de chaques classes : ")
     print(data.value_counts("Z"))
-    plt.show()
     label_encode(data, "C")
+    sn.heatmap(data.corr(), cmap="PiYG", vmax=0.5)
+    plt.show()
     x = data
     y = data["Z"]
     del x["A"]
