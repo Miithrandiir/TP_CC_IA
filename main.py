@@ -8,6 +8,7 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn import tree
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.neural_network import MLPClassifier
+from sklearn.metrics import confusion_matrix
 
 def label_encode(data, col: str):
     # Transforme un type catégorie en entier
@@ -50,10 +51,11 @@ def analyzeData():
 
 def knn(x_train, x_test, y_train, y_test):
     print("~ KNN Algorithm ~")
-    classifier = KNeighborsClassifier(n_neighbors=3)
+    classifier = KNeighborsClassifier(n_neighbors=8)
     classifier.fit(x_train, y_train)
     print("KNN Train score: ", classifier.score(x_train, y_train))
     print("KNN Test Score: ", classifier.score(x_test, y_test))
+    print("Matrice de confusion de KNN \n", confusion_matrix(y_test, classifier.predict(x_test)))
 
 
 def tree(x_train, x_test, y_train, y_test):
@@ -62,6 +64,7 @@ def tree(x_train, x_test, y_train, y_test):
     classifier.fit(x_train, y_train)
     print("Tree Train score: ", classifier.score(x_train, y_train))
     print("Tree Test Score: ", classifier.score(x_test, y_test))
+    print("Matrice de confusion de Tree \n", confusion_matrix(y_test, classifier.predict(x_test)))
 
 
 def neural_network(x_train, x_test, y_train, y_test):
@@ -70,6 +73,7 @@ def neural_network(x_train, x_test, y_train, y_test):
     classifier.fit(x_train, y_train)
     print("NN Train score: ", classifier.score(x_train, y_train))
     print("NN Test Score: ", classifier.score(x_test, y_test))
+    print("Matrice de confusion de NN \n", confusion_matrix(y_test, classifier.predict(x_test)))
 
 x_train_d, x_test_d, y_train_d, y_test_d = analyzeData()
 knn(x_train_d, x_test_d, y_train_d, y_test_d)
