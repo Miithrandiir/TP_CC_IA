@@ -1,6 +1,18 @@
 # Evaluation finale
 ## Simon HEBAN
 
+# Sommaire
+- [Analyse des données](#analyse-des-données)
+  - [Matrice de corrélation](#matrice-de-corrélation)
+  - [Type de problème (Classification)](#type-de-problème-classification)
+- [Suppressions de caractéristiques](#suppressions-de-caractéristiques)
+  - [Résultat lié à cette suppression](#résultat-lié-à-cette-suppression)
+- [Résultat (Partie Apprentissage & Conseils)](#résultat-partie-apprentissage--conseils)
+    - [KNN Algorithm](#knn-algorithm)
+    - [Tree Algorithm](#tree-algorithm)
+    - [Neuronal Network Algorithm](#neuronal-network-algorithm)
+- [Sortie du programme](#sortie-du-programme)
+
 # Analyse des données
 
 Après analyse des données du fichier [dataCCfinal.csv](data/dataCCfinal.csv) il y a:
@@ -34,7 +46,7 @@ Négativement corrélé avec la classe Z:
 
 Après analyse on se rend compte que le problème est un problème de **classification**. Nous avons déjà des exemples étiquetés nous sommes donc face à un apprentissage supervisé.
 
-## Suppressions de caractéristiques
+# Suppressions de caractéristiques
 
 Pendant le premier test on se rend compte que les performances des algorithmes KNN et Neuronal Network ne sont pas du tout bonne. (< 20%)
 Il y a un tri à faire dans les caractéristiques ! 
