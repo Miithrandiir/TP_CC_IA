@@ -132,3 +132,98 @@ Matrice de confusion de NN
  [ 0  0  0  0  0  0  3]]
 ```
 *Note: après suppression des caractéristiques non utiles on remarque que le score sur la base de tests sont nettement meilleur !*
+
+# Sortie du programme
+
+```
+~ Analyse de données ~
+nombre d'exemples : 101
+nombre de caractéristiques : 26
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 101 entries, 0 to 100
+Data columns (total 26 columns):
+ #   Column  Non-Null Count  Dtype 
+---  ------  --------------  ----- 
+ 0   A       101 non-null    int64 
+ 1   B       101 non-null    int64 
+ 2   C       101 non-null    object
+ 3   D       101 non-null    int64 
+ 4   E       101 non-null    int64 
+ 5   F       101 non-null    int64 
+ 6   G       101 non-null    int64 
+ 7   H       101 non-null    int64 
+ 8   I       101 non-null    int64 
+ 9   J       101 non-null    int64 
+ 10  K       101 non-null    int64 
+ 11  L       101 non-null    int64 
+ 12  M       101 non-null    int64 
+ 13  N       101 non-null    int64 
+ 14  O       101 non-null    int64 
+ 15  P       101 non-null    int64 
+ 16  Q       101 non-null    int64 
+ 17  R       101 non-null    int64 
+ 18  S       101 non-null    int64 
+ 19  T       101 non-null    int64 
+ 20  U       101 non-null    int64 
+ 21  V       101 non-null    int64 
+ 22  W       101 non-null    int64 
+ 23  X       101 non-null    int64 
+ 24  Y       101 non-null    int64 
+ 25  Z       101 non-null    int64 
+dtypes: int64(25), object(1)
+memory usage: 20.6+ KB
+           A      B           D  ...            X            Y           Z
+count  101.0  101.0  101.000000  ...   101.000000   101.000000  101.000000
+mean     1.0    0.0    0.425743  ...  4260.960396  5186.702970    2.831683
+std      0.0    0.0    0.496921  ...  2845.774815  2919.088318    2.102709
+min      1.0    0.0    0.000000  ...    70.000000   292.000000    1.000000
+25%      1.0    0.0    0.000000  ...  1538.000000  2444.000000    1.000000
+50%      1.0    0.0    0.000000  ...  3682.000000  5522.000000    2.000000
+75%      1.0    0.0    1.000000  ...  6467.000000  7688.000000    4.000000
+max      1.0    0.0    1.000000  ...  9838.000000  9923.000000    7.000000
+
+[8 rows x 25 columns]
+Nombre d'exemples de chaques classes : 
+Z
+1    41
+2    20
+4    13
+7    10
+6     8
+3     5
+5     4
+dtype: int64
+
+~ KNN Algorithm ~
+KNN Train score:  0.9104477611940298
+KNN Test Score:  0.9117647058823529
+Matrice de confusion de KNN 
+ [[14  0  0  0  0  0]
+ [ 0  8  0  0  0  0]
+ [ 0  1  0  0  0  0]
+ [ 0  0  0  2  0  0]
+ [ 0  0  0  0  3  0]
+ [ 0  1  0  0  1  4]]
+ 
+~ Tree Algorithm ~
+Tree Train score:  0.9701492537313433
+Tree Test Score:  0.9411764705882353
+Matrice de confusion de Tree 
+ [[14  0  0  0  0  0]
+ [ 0  8  0  0  0  0]
+ [ 0  0  1  0  0  0]
+ [ 0  0  0  2  0  0]
+ [ 0  0  0  0  3  0]
+ [ 0  1  0  0  1  4]]
+ 
+~ Neural Network Algorithm ~
+NN Train score:  0.9701492537313433
+NN Test Score:  0.9411764705882353
+Matrice de confusion de NN 
+ [[14  0  0  0  0  0]
+ [ 0  8  0  0  0  0]
+ [ 0  0  1  0  0  0]
+ [ 0  0  0  2  0  0]
+ [ 0  0  0  0  3  0]
+ [ 0  0  1  0  1  4]]
+```
